@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --primary: #ff0000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@theme {
+  --color-*: initial;
+  
+  /* DEV COLORS */
+  --color-fill: #ff4df9;
+
+  /* PRIMARY COLORS */
+  --color-primary: var(--color-primary);
+
+  /* STANDARD COLORS */
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: black;
+  width: 100%;
+  min-height: 100dvh;
   color: white;
+  font-family: "Inknut Antiqua", serif;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: x-large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a:hover {
+  color: var(--primary);
+}
+
+.layout {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.nav_items {
+  padding-right: 25%;
+  font-size: 1.2em;
+  vertical-align: bottom;
+}
+
+@media only screen and (max-width: 1020px) {
+  .nav_items {
+    font-size: 2vw;
+    padding-right: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .layout {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #logo {
+  }
+
+  #mainContent {
+    width: max-content;
+  }
+
+  #sidebar {
+    display: none;
   }
 }
