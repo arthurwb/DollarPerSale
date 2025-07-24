@@ -21,7 +21,10 @@
 }
 
 body {
-  background-color: black;
+  background-image: url("background.png");
+  background-color: rgba(0, 0, 0, 0.631);
+  background-blend-mode:color-burn;
+  background-size: cover;
   width: 100%;
   min-height: 100dvh;
   color: white;
@@ -37,8 +40,12 @@ a:hover {
 }
 
 .layout {
+  background-color: var(--color-black);
+  height: 100vh;
   margin-left: 150px;
   margin-right: 150px;
+  padding-left: 20px;
+  padding-right: 20px
 }
 
 .nav_items {

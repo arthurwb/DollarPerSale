@@ -1,10 +1,11 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Posts from '../components/Posts';
 
 function Home() {
   return (
     <div>
-        this is the text on the home page iu
+      <Posts></Posts>
     </div>
   );
 }
