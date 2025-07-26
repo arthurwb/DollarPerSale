@@ -1,30 +1,31 @@
-import mysql from 'mysql2/promise';
-import bcrypt from 'bcrypt';
+const mysql = require('mysql2/promise');
+const bcrypt = require('bcrypt');
+const crypto = require('crypto');
 
 async function main() {
   const connection = await mysql.createConnection({
     host: 'localhost',
-    user: 'user', // replace with your DB user
-    password: 'password', // replace with your DB password
+    user: 'root', // replace with your DB user
+    password: 'root_password', // replace with your DB password
     database: 'dps_database', // replace with your DB name
   });
 
   console.log('Connected to the database.');
 
   // Drop the User table if it exists
-  await connection.execute(`DROP TABLE IF EXISTS \`User\``);
+  await connection.execute('DROP TABLE IF EXISTS `User`');
   console.log('Dropped existing User table.');
 
   // Recreate the User table
   await connection.execute(`
     CREATE TABLE \`User\` (
-        \`id\` VARCHAR(36) NOT NULL PRIMARY KEY,
-        \`name\` VARCHAR(255) NOT NULL DEFAULT '',
-        \`email\` VARCHAR(255) NOT NULL DEFAULT '',
-        \`password\` TEXT NOT NULL,
-        \`createdAt\` DATETIME DEFAULT CURRENT_TIMESTAMP
+      \`id\` VARCHAR(36) NOT NULL PRIMARY KEY,
+      \`name\` VARCHAR(255) NOT NULL DEFAULT '',
+      \`email\` VARCHAR(255) NOT NULL DEFAULT '',
+      \`password\` TEXT NOT NULL,
+      \`createdAt\` DATETIME DEFAULT CURRENT_TIMESTAMP
     )
-    `);
+  `);
   console.log('Created User table.');
 
   // Recreate unique index on email
@@ -38,7 +39,7 @@ async function main() {
   // Insert the user
   const id = crypto.randomUUID();
   await connection.execute(
-    `INSERT INTO \`User\` (\`id\`, \`name\`, \`email\`, \`password\`) VALUES (?, ?, ?, ?)`,
+    'INSERT INTO `User` (`id`, `name`, `email`, `password`) VALUES (?, ?, ?, ?)',
     [id, 'Admin', 'admin@admin.com', hashedPassword]
   );
 
