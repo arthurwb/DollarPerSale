@@ -39,6 +39,14 @@ a:hover {
   color: var(--primary);
 }
 
+.header-small {
+    display: none;
+  }
+
+  .header-larger {
+    display: block;
+  }
+
 .layout {
   background-color: var(--color-black);
   height: 100vh;
@@ -54,7 +62,7 @@ a:hover {
   vertical-align: bottom;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1072px) {
   .nav_items {
     font-size: 2vw;
     padding-right: 20px;
@@ -73,6 +81,16 @@ a:hover {
   }
 
   #sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .header-small {
+    display: block;
+  }
+
+  .header-large {
     display: none;
   }
 }
