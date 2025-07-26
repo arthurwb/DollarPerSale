@@ -7,12 +7,19 @@
     "start": "keystone start",
     "build": "keystone build",
     "migrate-dev": "keystone prisma migrate dev",
-    "migrate-deploy": "keystone prisma migrate deploy"
+    "migrate-deploy": "keystone prisma migrate deploy",
+    "seed": "ts-node ./seed/admin.ts"
   },
   "dependencies": {
     "@keystone-6/auth": "^8.0.0",
     "@keystone-6/core": "^6.0.0",
     "@keystone-6/fields-document": "^9.0.0",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.1",
+    "mysql2": "^3.14.2",
     "typescript": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0"
   }
 }

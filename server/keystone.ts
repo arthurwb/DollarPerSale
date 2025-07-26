@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { config } from '@keystone-6/core';
 import cors from 'cors';
 
@@ -7,8 +8,8 @@ import { withAuth, session } from './auth';
 export default withAuth(
   config({
     db: {
-      provider: 'sqlite',
-      url: 'file:./keystone.db',
+      provider: 'mysql',
+      url: process.env.DATABASE_URL as string,
     },
     lists,
     session,
@@ -25,13 +26,13 @@ export default withAuth(
           })
         );
 
-        app.use((req, res, next) => {
-          res.setHeader(
-            'Content-Security-Policy',
-            "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
-          );
-          next();
-        });
+        // app.use((req, res, next) => {
+        //   res.setHeader(
+        //     'Content-Security-Policy',
+        //     "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+        //   );
+        //   next();
+        // });
 
         app.get('/api/posts', async (req, res) => {
           const context = await commonContext.withRequest(req, res);
