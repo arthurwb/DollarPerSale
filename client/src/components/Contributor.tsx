@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Contributor(props: any) {
   return (
     <div className="border-1 m-4 p-2">
