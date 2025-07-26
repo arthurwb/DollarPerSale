@@ -15,14 +15,14 @@ export default withAuth(
     session,
     server: {
       cors: {
-        origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://client-production-744c.up.railway.app', /\.up\.railway\.app$/],
+        origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://client-production-744c.up.railway.app', 'https://www.dollarpersale.com', /\.up\.railway\.app$/],
         credentials: true,
       },
       port: Number(process.env.PORT || 8080),
       extendExpressApp: (app, commonContext) => {
         app.use(
           cors({
-            origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://client-production-744c.up.railway.app', /\.up\.railway\.app$/],
+            origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://client-production-744c.up.railway.app', 'https://www.dollarpersale.com', /\.up\.railway\.app$/],
             credentials: true,
           })
         );
