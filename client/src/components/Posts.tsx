@@ -2,26 +2,17 @@ import { useEffect, useState } from 'react';
 import Post from './Post';
 
 async function getPosts() {
-  const res = await fetch('http://localhost:8080/api/posts');
+  const res = await fetch(import.meta.env.VITE_SERVER_URL);
   if (!res.ok) throw new Error('Failed to fetch posts');
   return res.json();
 }
 
 // Simple parser for your rich text JSON string (assumes paragraph content only)
-function renderContent(contentJson: string) {
+function renderContent(contentJson: any) {
   try {
-    const parsed = JSON.parse(contentJson);
-    return parsed.map((block: any, index: number) => {
-      if (block.type === 'paragraph') {
-        return (
-          <p key={index}>
-            {block.children.map((child: any) => child.text).join('')}
-          </p>
-        );
-      }
-      return null;
-    });
+    return <p>{contentJson[0].children[0].text}</p>
   } catch (err) {
+    console.log(err);
     return <p>[Invalid content]</p>;
   }
 }
@@ -54,7 +45,7 @@ export default function Posts() {
             <div className='grid justify-center'>
               <h2 className='text-3xl text-center underline'>{post.title}</h2>
               <div className='flex flex-col items-center'>
-                {post.images
+                {post.images && post.images
                   .split(',')
                   .map((url: string, index: number) => (
                     <img
