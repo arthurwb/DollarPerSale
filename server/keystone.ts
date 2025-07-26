@@ -18,13 +18,20 @@ export default withAuth(
         credentials: true,
       },
       extendExpressApp: (app, commonContext) => {
-        // ✅ Apply CORS globally BEFORE any routes are added
         app.use(
           cors({
             origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
             credentials: true,
           })
         );
+
+        app.use((req, res, next) => {
+          res.setHeader(
+            'Content-Security-Policy',
+            "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+          );
+          next();
+        });
 
         app.get('/api/posts', async (req, res) => {
           const context = await commonContext.withRequest(req, res);
