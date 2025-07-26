@@ -3,6 +3,7 @@ import Post from './Post';
 
 async function getPosts() {
   const res = await fetch(import.meta.env.VITE_SERVER_URL);
+  console.log(await res.json())
   if (!res.ok) throw new Error('Failed to fetch posts');
   return res.json();
 }
