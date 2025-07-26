@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 function Layout() {
   return (
-    <div className='layout'>
+    <div className='layout h-screen'>
         <div id='scrolling text' className='p-2'>
             SCROLLING TEXT HERE
         </div>
@@ -19,7 +19,7 @@ function Layout() {
             </div>
         </header>
         <header className='p-2 mb-2 flex header-large'>
-            <div className='flex border-2 justify-center min-w-30 items-center me-2'>
+            <div className='flex border-2 justify-center min-w-40 items-center me-2'>
                 <a href='/' className='h-30'>
                     <img id='logo' src='200x200.png' className='p-1 h-full object-cover'></img>
                 </a>
@@ -28,17 +28,17 @@ function Layout() {
                 <div className='bg-black flex flex-row'>
                     <img src='800x100.png' className='border-2 p-1 w-full max-h-20 object-cover'></img>
                 </div>
-                <div className='grid grid-cols-5 max-sm:grid-cols-2 max-2xl:grid-cols-3 pt-4 pe-20 whitespace-nowrap space-x-10 underline nav_items'>
-                    <a href='/about'>About $PS</a>
-                    <a href='/'>$PZ Archive</a>
-                    <a href='/'>Contributors</a>
-                    <a href='/'>Support</a>
-                    <a href='/'>Contact</a>
+                <div className='grid grid-cols-5 max-sm:grid-cols-2 max-2xl:grid-cols-3 pt-4 pe-76 whitespace-nowrap underline nav_items'>
+                    <a href='/about' className='nav-item'>About $PS</a>
+                    <a href='/' className='nav-item'>$PZ Archive</a>
+                    <a href='/contributors' className='nav-item'>Contributors</a>
+                    <a href='/' className='nav-item'>Support</a>
+                    <a href='/' className='nav-item'>Contact</a>
                 </div>
             </div>
         </header>
         <div className='flex flex-row'>
-            <main id='mainContent' className='lg:basis-5/6 h-175 overflow-y-scroll w-full border-1 lg:me-2 p-1 max-lg:mx-auto'>
+            <main id='mainContent' className='lg:basis-5/6 h-175 max-sm:h-140 overflow-y-scroll w-full border-1 lg:me-2 p-1 max-lg:mx-auto'>
                 <Outlet />
             </main>
             <div id='sidebar' className='relative basis-1/6 border-1 min-h-[75dvh] -top-12'>
