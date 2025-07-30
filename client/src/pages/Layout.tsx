@@ -39,7 +39,7 @@ function Layout() {
             </div>
         </header>
         <div className='flex flex-row'>
-            <main id='mainContent' className='lg:basis-5/6 h-175 max-sm:h-140 overflow-y-scroll w-full border-1 lg:me-2 p-1 max-lg:mx-auto'>
+            <main id='mainContent' className='content lg:basis-5/6 max-sm:h-[60vh] overflow-y-scroll w-full border-1 lg:me-2 p-1 max-lg:mx-auto'>
                 <Outlet />
             </main>
             <div id='sidebar' className='relative basis-1/6 border-1 min-h-[75dvh] -top-12'>
