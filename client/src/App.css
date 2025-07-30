@@ -4,6 +4,7 @@
 
 :root {
   --primary: #ff0000;
+  --white: #ffffff;
 }
 
 @theme {
@@ -16,7 +17,7 @@
   --color-primary: var(--color-primary);
 
   /* STANDARD COLORS */
-  --color-white: #ffffff;
+  --color-white: var(--color-white);
   --color-black: #000000;
 }
 
@@ -24,9 +25,8 @@ body {
   background-image: url("/assets/background.png");
   background-color: rgba(0, 0, 0, 0.631);
   background-blend-mode:color-burn;
-  background-size: cover;
+  background-size:cover;
   width: 100%;
-  min-height: 100dvh;
   color: white;
   font-family: "Inknut Antiqua", serif;
 }
@@ -43,13 +43,12 @@ a:hover {
     display: none;
   }
 
-  .header-larger {
-    display: block;
-  }
+.header-larger {
+  display: block;
+}
 
 .layout {
   background-color: var(--color-black);
-  height: 100vh;
   margin-left: 150px;
   margin-right: 150px;
   padding-left: 20px;
@@ -57,9 +56,19 @@ a:hover {
 }
 
 .nav_items {
-  padding-right: 25%;
   font-size: 1.2em;
-  vertical-align: bottom;
+}
+
+/*border-1 mx-2 mb-1*/
+.nav-item {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-bottom: 4px;
+  padding: 2px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1072px) {
