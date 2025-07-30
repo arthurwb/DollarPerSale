@@ -1,5 +1,3 @@
-import React from 'react';
-
 function renderContent(contentJson: any) {
   try {
     return <p>{contentJson[0].children[0].text}</p>
