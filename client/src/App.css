@@ -4,6 +4,7 @@
 
 :root {
   --primary: #ff0000;
+  --white: #ffffff;
 }
 
 @theme {
@@ -16,7 +17,7 @@
   --color-primary: var(--color-primary);
 
   /* STANDARD COLORS */
-  --color-white: #ffffff;
+  --color-white: var(--color-white);
   --color-black: #000000;
 }
 
@@ -24,9 +25,8 @@ body {
   background-image: url("/assets/background.png");
   background-color: rgba(0, 0, 0, 0.631);
   background-blend-mode:color-burn;
-  background-size: cover;
+  background-size:cover;
   width: 100%;
-  min-height: 100dvh;
   color: white;
   font-family: "Inknut Antiqua", serif;
 }
@@ -43,9 +43,9 @@ a:hover {
     display: none;
   }
 
-  .header-larger {
-    display: block;
-  }
+.header-larger {
+  display: block;
+}
 
 .layout {
   background-color: var(--color-black);
