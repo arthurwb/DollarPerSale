@@ -10,7 +10,7 @@ function Layout() {
             <div className='grid p-2 max-sm:grid-cols-2 text-center space-x-10 items-center'>
                 <a href='/about' className='border-1 m-1 p-1'>About $PS</a>
                 <a href='/' className='border-1 m-1 p-1'>$PZ Archive</a>
-                <a href='/' className='border-1 m-1 p-1 col-span-2'>Contributors</a>
+                <a href='/contributors' className='border-1 m-1 p-1 col-span-2'>Contributors</a>
                 <a href='/' className='border-1 m-1 p-1'>Support</a>
                 <a href='/' className='border-1 m-1 p-1'>Contact</a>
             </div>
