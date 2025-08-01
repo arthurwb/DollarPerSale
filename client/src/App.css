@@ -4,7 +4,9 @@
 
 :root {
   --primary: #ff0000;
+  --primary-dark: #960000;
   --white: #ffffff;
+  --grey: #505050;
 }
 
 @theme {
@@ -95,6 +97,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 640px) {
+  body {
+    font-size: 0.75em;
+  }
+
   .header-small {
     display: block;
   }
