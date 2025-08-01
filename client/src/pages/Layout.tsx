@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 function Layout() {
   return (
-    <div className='layout h-screen'>
+    <div className='layout h-[100vh]'>
         <header className='header-small'>
             <div className='border-1 p-2'>
                 <a href='/'><img src='DPS_Banner.png' className='w-full'></img></a>
