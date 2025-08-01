@@ -12,7 +12,7 @@ function Layout() {
                 <a href='/' className='border-1 m-1 p-1'>$PZ Archive</a>
                 <a href='/contributors' className='border-1 m-1 p-1 col-span-2'>Contributors</a>
                 <a href='/' className='border-1 m-1 p-1'>Support</a>
-                <a href='/' className='border-1 m-1 p-1'>Contact</a>
+                <a href='/contact' className='border-1 m-1 p-1'>Contact</a>
             </div>
         </header>
         <header className='p-2 mb-2 flex header-large'>
