@@ -1,5 +1,3 @@
-import Contributor from "../components/Contributor";
-
 function Contributors() {
   return (
     <div className="p-2 grid grid-cols-4 max-sm:grid-cols-1 gap-1">
