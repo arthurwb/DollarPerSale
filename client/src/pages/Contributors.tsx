@@ -8,6 +8,11 @@ function Contributors() {
             role="Web Admin, Musician, Photographer"
             about="I've been playing music for a while, I've been making websites for a little bit less time, and I have been taking pictures for a few months. If the website sucks it's my fault."
         ></Contributor>
+        <Contributor 
+          name="Aiiden (Twig)"
+          role="Marketing, Musician, Outreach"
+          about="Chronically on thin ice but funny enough to keep around. Without meds I am able to play guitar for Songs for Kimchi, make noise with Tegan in Ditch Lilies, and manage the $PS social media presence. Taking my second shot at homelessness to focus on my career as a writer for $PZ. Open to prayers and threats. Call me."
+        />
         <Contributor
           name="Alice Victoria Crimson"
           role="America's least favorite interviewer and seeker of truth"
