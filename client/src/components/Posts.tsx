@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import Post from './Post';
 
 async function getPosts() {
-  const res = await fetch(import.meta.env.VITE_SERVER_URL);
-  console.log("URL:", import.meta.env.VITE_SERVER_URL)
+  const res = await fetch(import.meta.env.VITE_SERVER_URL_POST);
+  console.log("URL:", import.meta.env.VITE_SERVER_URL_POST)
   if (!res.ok) throw new Error('Failed to fetch posts');
   return res.json();
 }

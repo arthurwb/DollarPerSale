@@ -40,6 +40,12 @@ export default withAuth(
           const posts = await context.db.Post.findMany();
           res.json(posts);
         });
+
+        app.get('/api/projects', async (req, res) => {
+          const context = await commonContext.withRequest(req, res);
+          const projects = await context.db.Project.findMany();
+          res.json(projects);
+        });
       },
     },
   })

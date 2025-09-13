@@ -27,3 +27,12 @@ model Post {
   author  String    @default("")
   date    DateTime? @default(now())
 }
+
+model Project {
+  id           String @id @default(cuid())
+  title        String @default("")
+  link         String @default("")
+  content      Json   @default("[{\"type\":\"paragraph\",\"children\":[{\"text\":\"\"}]}]")
+  images       String @default("")
+  contributors String @default("")
+}

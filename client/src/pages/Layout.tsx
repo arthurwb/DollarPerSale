@@ -9,7 +9,7 @@ function Layout() {
             </div>
             <div className='grid p-2 max-sm:grid-cols-2 text-center space-x-10 items-center'>
                 <a href='/about' className='border-1 m-1 p-1'>About $PS</a>
-                <a href='/' className='border-1 m-1 p-1'>$PZ Archive</a>
+                <a href='/blog' className='border-1 m-1 p-1'>Blog</a>
                 <a href='/contributors' className='border-1 m-1 p-1 col-span-2'>Contributors</a>
                 <a href='/' className='border-1 m-1 p-1'>Support</a>
                 <a href='/contact' className='border-1 m-1 p-1'>Contact</a>
@@ -31,7 +31,7 @@ function Layout() {
                 </a>
                 <div className='grid grid-cols-5 max-sm:grid-cols-2 max-2xl:grid-cols-3 pt-4 pe-76 whitespace-nowrap underline nav_items'>
                     <a href='/about' className='nav-item'>About $PS</a>
-                    <a href='/' className='nav-item'>$PZ Archive</a>
+                    <a href='/blog' className='nav-item'>Blog</a>
                     <a href='/contributors' className='nav-item'>Contributors</a>
                     <a href='/' className='nav-item'>Support</a>
                     <a href='/contact' className='nav-item'>Contact</a>
@@ -39,10 +39,10 @@ function Layout() {
             </div>
         </header>
         <div className='flex flex-row h-[75dvh] max-sm:h-[70dvh]'>
-            <main id='mainContent' className='lg:basis-7/8 max-sm:max-h-[70dvh] overflow-y-scroll w-full border-1 lg:me-2 p-1 max-lg:mx-auto'>
+            <main id='mainContent' className='max-sm:max-h-[70dvh] overflow-y-scroll w-full border-1 p-1 max-lg:mx-auto'>
                 <Outlet />
             </main>
-            <div id='sidebar' className='relative basis-1/8 border-1 min-h-[75dvh] -top-12 overflow-y-scroll'>
+            {/* <div id='sidebar' className='relative basis-1/8 border-1 min-h-[75dvh] -top-12 overflow-y-scroll'>
                 <a target='_blank' href='https://www.instagram.com/spsdollarpersale/'>
                     <div className='border-1 p-1 m-1'>
                         <h1>Dollar per Sale</h1>
@@ -69,7 +69,7 @@ function Layout() {
                         </div>
                     </a>
                 </div>
-            </div>
+            </div> */}
         </div>
     </div>
   );

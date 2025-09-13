@@ -57,4 +57,33 @@ export const lists = {
       date: timestamp({ defaultValue: { kind: 'now' } }),
     },
   }),
+
+  Project: list ({
+    access: allowAll,
+    graphql: {
+      plural: 'Projects',
+    },
+    fields: {
+      title: text({ validation: { isRequired: true } }),
+      link: text({}),
+      content: document({
+        formatting: true,
+        layouts: [
+          [1, 1],
+          [1, 1, 1],
+          [2, 1],
+          [1, 2],
+          [1, 2, 1],
+        ],
+        links: true,
+        dividers: true,
+      }),
+      images: text({
+        ui: {
+          displayMode: 'textarea',
+        },
+      }),
+      contributors: text({ validation: { isRequired: true } }),
+    }
+  })
 } satisfies Lists;
