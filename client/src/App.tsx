@@ -26,6 +26,10 @@ function App() {
         <Route path="/blog" element={<Layout />}>
           <Route index element={<Blog />} />
         </Route>
+        <Route path='/admin' Component={() => {
+          window.location.href = import.meta.env.VITE_ADMIN_URL;
+          return null;
+        }}/>
       </Routes>
     </BrowserRouter>
   );

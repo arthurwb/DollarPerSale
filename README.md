@@ -21,6 +21,7 @@ Running on KeystoneJS because KeystoneJS is free and pretty easy to just start u
 # ENV
 ## CLIENT
 VITE_SERVER_URL=http://localhost:8080/api/posts
+VITE_ADMIN_URL=https://dollarpersale.up.railway.app
 
 ## SERVER
 DATABASE_URL=mysql://user:password@localhost:3306/dps_database
