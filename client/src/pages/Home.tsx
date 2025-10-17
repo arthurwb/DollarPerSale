@@ -6,7 +6,7 @@ function Home() {
     <div>
       <div className="text-center">
         <h1 className="">DOLLAR-PER-$ALE</h1>
-        <p>CONTACT: email@email.com</p>
+        <p>CONTACT: contact@dollarpersale.com</p>
       </div>
       <h2 className='text-center'>Current Projects</h2>
       <Projects></Projects>
