@@ -29,7 +29,7 @@ export default function Posts() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className='grid grid-cols-3 gap-1 max-md:grid-cols-2'>
+    <div className='grid grid-cols-3 gap-1 max-md:grid-cols-1'>
       {[...projects].reverse().map((project) => (
         <Project key={project.id} project={project} className='grid grid-col-3'>
         </Project>
