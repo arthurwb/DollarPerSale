@@ -10,9 +10,10 @@ function Layout() {
             <div className='grid p-2 max-sm:grid-cols-2 text-center space-x-10 items-center'>
                 <a href='/about' className='border-1 m-1 p-1'>About $PS</a>
                 <a href='/blog' className='border-1 m-1 p-1'>Blog</a>
-                <a href='/contributors' className='border-1 m-1 p-1 col-span-2'>Contributors</a>
+                <a href='/contributors' className='border-1 m-1 p-1'>Contributors</a>
                 <a href='/' className='border-1 m-1 p-1'>Support</a>
                 <a href='/contact' className='border-1 m-1 p-1'>Contact</a>
+                <a href='/head' className='border-1 m-1 p-1'>Thing</a>
             </div>
         </header>
         <header className='p-2 mb-2 flex header-large'>
@@ -29,12 +30,13 @@ function Layout() {
                         </div>
                     </div>
                 </a>
-                <div className='grid grid-cols-5 max-sm:grid-cols-2 max-2xl:grid-cols-3 pt-4 pe-76 whitespace-nowrap underline nav_items'>
+                <div className='grid grid-cols-6 max-sm:grid-cols-2 max-2xl:grid-cols-3 pt-4 whitespace-nowrap underline nav_items'>
                     <a href='/about' className='nav-item'>About $PS</a>
                     <a href='/blog' className='nav-item'>Blog</a>
                     <a href='/contributors' className='nav-item'>Contributors</a>
                     <a href='/' className='nav-item'>Support</a>
                     <a href='/contact' className='nav-item'>Contact</a>
+                    <a href='/head' className='nav-item'>Thing</a>
                 </div>
             </div>
         </header>
