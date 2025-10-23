@@ -1,5 +1,3 @@
-import test from 'node:test';
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Dropdown from '../components/Dropdown';
 
