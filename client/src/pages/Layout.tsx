@@ -13,12 +13,13 @@ function Layout() {
                     <a href='/contributors' className='border-1 m-1 p-1'>Contributors</a>
                     <div className='col-span-2'>
                         <Dropdown
-                            trigger={<div>&#x2304; Reach Out &#x2304;</div>}
+                            trigger={<div>&#x2304; More &#x2304;</div>}
                             menu={[
                                 <a href='/blog'>Blog</a>,
                                 <a href='/head'>Thing</a>,
                                 <a href='/'>Support</a>,
                                 <a href='contact'>Contact</a>,
+                                <a href='/zine-archive'>Archive</a>,
                             ]}
                             className='dropdown border-1 m-1 p-1 mx-auto'
                         />
