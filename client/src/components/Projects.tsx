@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import Project from './Project';
 
 async function getProjects() {
-  const res = await fetch(import.meta.env.VITE_SERVER_URL_PROJECT);
-  console.log("URL:", import.meta.env.VITE_SERVER_URL_PROJECT)
+  const res = await fetch(import.meta.env.VITE_SERVER_URL_PROJECT + "projects");
   if (!res.ok) throw new Error('Failed to fetch projects');
   return res.json();
 }

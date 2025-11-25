@@ -43,9 +43,34 @@ function Layout() {
                         <a href='/about' className='nav-item'>About $PS</a>
                         <a href='/blog' className='nav-item'>Blog</a>
                         <a href='/contributors' className='nav-item'>Contributors</a>
-                        <a href='/' className='nav-item'>Support</a>
-                        <a href='/contact' className='nav-item'>Contact</a>
-                        <a href='/head' className='nav-item'>Thing</a>
+                        <div className='nav-item col-span-1'>
+                            <Dropdown
+                                trigger={<a className='cursor-pointer'>&#x2304; Dollar per Zine &#x2304;</a>}
+                                menu={[
+                                    <a href='/zine-archive'>Archive</a>,
+                                ]}
+                                className='dropdown'
+                            />
+                        </div>
+                        <div className='nav-item col-span-1'>
+                            <Dropdown
+                                trigger={<a className='cursor-pointer'>&#x2304; Reach Out &#x2304;</a>}
+                                menu={[
+                                    <a href='/'>Support</a>,
+                                    <a href='contact'>Contact</a>,
+                                ]}
+                                className='dropdown'
+                            />
+                        </div>
+                        <div className='nav-item col-span-1'>
+                            <Dropdown
+                                trigger={<a className='cursor-pointer'>&#x2304; Misc &#x2304;</a>}
+                                menu={[
+                                    <a href='/head'>Thing</a>,
+                                ]}
+                                className='dropdown'
+                            />
+                        </div>
                     </div>
                 </div>
             </header>

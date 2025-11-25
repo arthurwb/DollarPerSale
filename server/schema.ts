@@ -6,6 +6,7 @@ import {
   relationship,
   password,
   timestamp,
+  integer,
 } from '@keystone-6/core/fields';
 
 import { document } from '@keystone-6/fields-document';
@@ -84,6 +85,17 @@ export const lists = {
         },
       }),
       contributors: text({ validation: { isRequired: true } }),
+    }
+  }),
+
+  ZineArchive: list ({
+    access: allowAll,
+    graphql: {
+      plural: 'ZineArchives',
+    },
+    fields: {
+      yearMonth: integer({ validation: { isRequired: true } }),
+      link: text({ validation: { isRequired: true } }),
     }
   })
 } satisfies Lists;

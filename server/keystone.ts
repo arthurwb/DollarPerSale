@@ -46,6 +46,12 @@ export default withAuth(
           const projects = await context.db.Project.findMany();
           res.json(projects);
         });
+
+        app.get('/api/zinearchive', async (req, res) => {
+          const context = await commonContext.withRequest(req, res);
+          const zinearchive = await context.db.ZineArchive.findMany();
+          res.json(zinearchive);
+        });
       },
     },
   })

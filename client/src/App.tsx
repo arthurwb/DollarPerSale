@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Head from "./pages/Head";
+import ZineArchive from "./pages/ZineArchive";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/head">
           <Route index element={<Head />} />
+        </Route>
+        <Route path="/zine-archive" element={<Layout />}>
+          <Route index element={<ZineArchive />} />
         </Route>
         <Route path='/admin' Component={() => {
           window.location.href = import.meta.env.VITE_ADMIN_URL;

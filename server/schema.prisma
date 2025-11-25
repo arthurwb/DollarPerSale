@@ -36,3 +36,9 @@ model Project {
   images       String @default("")
   contributors String @default("")
 }
+
+model ZineArchive {
+  id        String @id @default(cuid())
+  yearMonth Int
+  link      String @default("")
+}
