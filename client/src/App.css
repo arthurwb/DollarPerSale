@@ -7,6 +7,10 @@
   --primary-dark: #960000;
   --white: #ffffff;
   --grey: #505050;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey: #505050;
+  --color-darkred: #140000;
 }
 
 @theme {
@@ -77,6 +81,19 @@ a:hover {
   margin-bottom: 4px;
   padding: 2px;
   text-align: center;
+}
+
+.about-text {
+  font-size: 1.08em
+}
+
+.about-img-col {
+  background-color: var(--black);
+  border: 4px solid var(--primary-dark);
+}
+
+.about-border {
+  border: 4px solid var(--primary-dark);
 }
 
 @media only screen and (max-width: 1072px) {

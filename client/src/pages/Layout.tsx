@@ -6,7 +6,7 @@ function Layout() {
         <div className='layout h-[100dvh]'>
             <header className='header-small'>
                 <div className='border-1 p-2'>
-                    <a href='/'><img src='DPS_Banner.png' className='w-full'></img></a>
+                    <a href='/'><img className='invert' src='DPS_Banner.png'></img></a>
                 </div>
                 <div className='grid p-2 max-sm:grid-cols-2 text-center space-x-10 items-center'>
                     <a href='/about' className='border-1 m-1 p-1'>About $PS</a>
@@ -34,9 +34,9 @@ function Layout() {
                 </div>
                 <div className='w-full'>
                     <a href='/'>
-                        <div className='w-full bg-(--black) flex flex-row border-2'>
-                            <div className='m-1 w-full bg-(--white)'>
-                                <img src='DPS_Banner.png' className='w-4/5 m-auto max-h-20 object-cover object-[25%_50%]'></img>
+                        <div className='w-full bg-(--black) flex flex-row'>
+                            <div className='me-45 m-1 w-full'>
+                                <img src='DPS_Banner.png' className='m-auto max-h-20 object-cover object-[25%_50%] invert hover:filter-none'></img>
                             </div>
                         </div>
                     </a>
@@ -75,8 +75,8 @@ function Layout() {
                     </div>
                 </div>
             </header>
-            <div className='flex flex-row h-[75dvh] max-sm:h-[70dvh]'>
-                <main id='' className='max-sm:max-h-[70dvh] overflow-y-scroll w-full border-1 p-1 max-lg:mx-auto'>
+            <div className='flex flex-row h-[78dvh] max-sm:h-[80dvh]'>
+                <main id='' className='max-sm:max-h-[90dvh] overflow-y-scroll w-full border-1 p-1 max-lg:mx-auto'>
                     <Outlet />
                 </main>
                 {/* <div id='sidebar' className='relative basis-1/8 border-1 min-h-[75dvh] -top-12 overflow-y-scroll'>
