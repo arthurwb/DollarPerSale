@@ -4,21 +4,6 @@ function Contributors() {
   return (
     <div className="p-2">
         <Contributor
-            name="Brooks"
-            role="Web Admin, Musician, Photographer"
-            about="I've been playing music for a while, I've been making websites for a little bit less time, and I have been taking pictures for a few months. If the website sucks it's my fault."
-        ></Contributor>
-        <Contributor 
-          name="Aiiden (Twig)"
-          role="Marketing, Musician, Outreach"
-          about="Chronically on thin ice but funny enough to keep around. Without meds I am able to play guitar for Songs for Kimchi, make noise with Tegan in Ditch Lilies, and manage the $PS social media presence. Taking my second shot at homelessness to focus on my career as a writer for $PZ. Open to prayers and threats. Call me."
-        />
-        <Contributor
-          name="Alice Victoria Crimson"
-          role="America's least favorite interviewer and seeker of truth"
-          about="I'm a witch who uses her connection to the energy of life itself to consider things from alternative perspectives in order to create art that's true to myself and therefore innate. I'm a bit of an attention whore too, so I like to spend time around people and learn about them in order to better my understanding of the mortal experience and how every piece of the puzzle fits together. I'm also just weird as hell :3"
-        ></Contributor>
-        <Contributor
           name="Jesse"
           role="Musician"
           about="I listen to the radio. I drive 45 minutes to work and back. I have never soldered anything that worked. I don't like pineapple or long sleeve shirts or horses.

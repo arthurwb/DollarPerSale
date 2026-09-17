@@ -41,9 +41,9 @@ function Layout() {
                         </div>
                     </a>
                     <div className='grid grid-cols-6 max-sm:grid-cols-2 max-2xl:grid-cols-3 pt-4 whitespace-nowrap underline nav_items'>
+                        <a href='/' className='nav-item'>Home</a>
                         <a href='/about' className='nav-item'>About $PS</a>
                         <a href='/blog' className='nav-item'>Blog</a>
-                        <a href='/contributors' className='nav-item'>Contributors</a>
                         <div className='nav-item col-span-1'>
                             <Dropdown
                                 trigger={<a className='cursor-pointer'>&#x2304; Dollar per Zine &#x2304;</a>}
@@ -59,6 +59,7 @@ function Layout() {
                                 menu={[
                                     <a href='/'>Support</a>,
                                     <a href='contact'>Contact</a>,
+                                    <a href='/contributors'>Contributors</a>,
                                 ]}
                                 className='dropdown'
                             />
